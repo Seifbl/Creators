@@ -1,0 +1,12 @@
+<h2 align="center">Mise à jour d'une sprint</h2>
+
+
+nomTache : <input type="text" [(ngModel)]="nomTache" class="form-control" />
+dateDebut : <input type="datetime" [(ngModel)]="dateDebut" class="form-control" />
+dateFin : <input type="datetime" [(ngModel)]="dateFin" class="form-control" />
+description : <input type="text" [(ngModel)]="description" class="form-control" />
+priorite : <input type="text" [(ngModel)]="priorite" class="form-control" />
+estimation : <input type="text" [(ngModel)]="estimation" class="form-control" />
+elementsLiees : <input type="text" [(ngModel)]="elementsLiees" class="form-control" />
+<button class="btn btn-success"  (click)="updatesprintbacklog()" >Mise à jour</button>
+

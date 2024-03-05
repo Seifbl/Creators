@@ -1,0 +1,38 @@
+<h2>Liste des sprintbacklog</h2>
+        <button class="btn btn-primary" style="margin-left: -200px;" [routerLink]="['../ajoutersprint']">Ajouter sprint</button>
+        <table class="full-width-container">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">nomTache</th>
+                <th scope="col">description</th>
+                <th scope="col">priorite</th>
+                <th scope="col">estimation</th>
+                <th scope="col">dateDebut</th>
+                <th scope="col">dateFin</th>
+                <th scope="col">elementsLiees</th>
+                <th scope="col">Supprimer</th>
+                <th scope="col">Modifier</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let sprint of sprints">
+                <td>{{ sprint.idSprintBacklog }}</td>
+                <td>{{ sprint.nomTache }}</td>
+                <td>{{ sprint.description }}</td>
+                <td>{{ sprint.priorite }}</td>
+                <td>{{ sprint.estimation }}</td>
+                <td>{{ sprint.dateDebut }}</td>
+                <td>{{ sprint.dateFin }}</td>
+                <td>{{ sprint.elementsLiees }}</td>
+                <td>
+                  <button class="btn btn-danger" (click)="supprimersprint(sprint.idSprintBacklog)" >Supprimer</button>
+                </td>
+                <td>
+                  <button class="btn btn-warning" (click)="modifiersprint(sprint.idSprintBacklog)">Modifier</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+

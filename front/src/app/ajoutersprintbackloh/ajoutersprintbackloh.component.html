@@ -1,0 +1,12 @@
+<form #data="ngForm"  (ngSubmit)="persistesprint(data.value)">
+
+    nomTache : <input type="text" ngModel class="form-control" name="nomTache" />
+    dateDebut : <input type="datetime" ngModel class="form-control" name="dateDebut" />
+    dateFin : <input type="datetime" ngModel class="form-control" name="dateFin" />
+    description : <input type="text" ngModel class="form-control" name="description" />
+    priorite : <input type="number" ngModel class="form-control" name="priorite" />
+    estimation : <input type="text" ngModel class="form-control" name="estimation" />
+    elementsLiees : <input type="text" ngModel class="form-control" name="elementsLiees" />  
+   <button type="submit" class="btn btn-primary" value="Ajouter" style="margin-top:5px">Ajouter<i style="margin-left:5px" class="fa fa-plus" aria-hidden="true"></i>
+   </button>
+  </form>

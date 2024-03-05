@@ -1,0 +1,27 @@
+<h2>Liste des reclamations</h2>
+        <button class="btn btn-primary" style="margin-left: -200px;" [routerLink]="['../ajoutereclamaton']">Ajouter reclamation</button>
+        <table class="full-width-container">
+            <thead>
+              <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Description</th>
+                <th scope="col">Date de Soumission</th>
+                <th scope="col">Supprimer</th>
+                <th scope="col">Modifier</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let reclamation of reclamations">
+                <td>{{ reclamation.name }}</td>
+                <td>{{ reclamation.descriptionReclamation }}</td>
+                <td>{{ reclamation.dateSoumission }}</td>
+                <td>
+                  <button class="btn btn-danger" (click)="supprimerreclamation(reclamation.id)" >Supprimer</button>
+                </td>
+                <td>
+                  <button class="btn btn-warning" (click)="modifierreclamation(reclamation.id)">Modifier</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
