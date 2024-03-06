@@ -19,6 +19,8 @@ import { AddUserComponent } from './dashboard/add-user/add-user.component';
 import { CommentComponent } from './dashboard/comment/comment.component';
 import { EditCommentComponent } from './dashboard/edit-comment/edit-comment.component';
 import { AddCommentComponent } from './dashboard/add-comment/add-comment.component';
+import { ForgetPasswordComponent } from './dashboard/forget-password/forget-password.component';
+import { ChangePasswordComponent } from './dashboard/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { AddCommentComponent } from './dashboard/add-comment/add-comment.compone
     AddUserComponent,
     CommentComponent,
     EditCommentComponent,
-    AddCommentComponent
+    AddCommentComponent,
+    ForgetPasswordComponent,
+     ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

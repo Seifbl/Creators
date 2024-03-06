@@ -34,7 +34,7 @@ export class AxiosService {
        method: method,
        url: url,
        data: data,
-      //  headers: headers
+      // headers: headers
     });
    }
 }

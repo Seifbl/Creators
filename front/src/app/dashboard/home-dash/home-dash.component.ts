@@ -18,13 +18,14 @@ export class HomeDashComponent implements OnInit {
   constructor(private router: Router,private axios: AxiosService,) { }
   ngOnInit(){
   this.auth = window.localStorage.getItem("auth_token");
-   this.axios.request("GET","/user",{}).then(res=>{
+   this.axios.request("GET","/user/"+window.localStorage.getItem("id"),{}).then(res=>{
     this.users = res.data;
 });
   this.auth==null?this.router.navigate(["sign-in-dashboard"]):null;
  }
  logout(){
   window.localStorage.removeItem("auth_token");
+  window.localStorage.removeItem("id");
   this.router.navigate(["sign-in-dashboard"])
  }
  delete(id : any){
@@ -32,7 +33,7 @@ export class HomeDashComponent implements OnInit {
     
 }).then(res=>{
   this.success="Delete Successefully.";
-  this.axios.request("GET","/user",{}).then(res=>{
+  this.axios.request("GET","/user/"+window.localStorage.getItem("id"),{}).then(res=>{
     this.users = res.data;
 });
 }).catch(err=>{

@@ -23,7 +23,7 @@ export class AddCommentComponent {
           "content":this.content
           
       }).then(res=>{
-        this.router.navigate(["dashboard"]);
+        this.router.navigate(["/dashboard/comment"]);
   
       });
 

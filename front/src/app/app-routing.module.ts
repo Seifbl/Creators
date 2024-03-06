@@ -1,8 +1,6 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './Front/home/home.component';
 import { ReclamationComponent } from './Front/reclamation/reclamation.component';
-import { HeaderComponent } from './Front/header/header.component';
 import { FrontComponent } from './Front/front/front.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { RegisterComponent } from './register/register.component';
@@ -13,11 +11,15 @@ import { AddUserComponent } from './dashboard/add-user/add-user.component';
 import { CommentComponent } from './dashboard/comment/comment.component';
 import {EditCommentComponent} from './dashboard/edit-comment/edit-comment.component'
 import { AddCommentComponent } from './dashboard/add-comment/add-comment.component';
+import { ForgetPasswordComponent } from './dashboard/forget-password/forget-password.component';
+import { ChangePasswordComponent } from './dashboard/change-password/change-password.component';
 const routes: Routes = [
   { path: '', component: FrontComponent },
   { path: 'reclamation', component: ReclamationComponent },
   { path: 'sign-in', component: SignInComponent },
   {path: 'register', component:RegisterComponent},
+  {path: 'forget', component:ForgetPasswordComponent},
+  {path: 'changepassword', component:ChangePasswordComponent},
   {path:'sign-in-dashboard',component:SignInDashboardComponent},
   {path:'dashboard',component:HomeDashComponent},
   {path:'dashboard/useredit/:id',component:EditUserComponent},

@@ -31,6 +31,7 @@ export class SignInDashboardComponent {
         "password":this.password
     }).then(res=>{
       window.localStorage.setItem("auth_token" ,res.data.token);
+      window.localStorage.setItem("id" ,res.data.id);
       this.router.navigate(["dashboard"]);
 
     }).catch(err=>{
@@ -49,6 +50,8 @@ export class SignInDashboardComponent {
       this.router.navigate(["sign-in-dashboard"]);
 
     });
+    this.router.navigate(["sign-in-dashboard"]);
+
     }
   }
 
