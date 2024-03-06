@@ -9,6 +9,7 @@ import com.seif.jwt.backend.mappers.UserMapper;
 import com.seif.jwt.backend.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -61,6 +62,27 @@ public UserDto register(SignUpDto signUpDto){
         System.out.println(u1);
         u.setPassword(u1.getPassword());
         userRepository.save(u);
+    }
+
+    public void updateResetPasswordToken(String token, String email) {
+        System.out.println(email);
+        email = email.replace("\"","");
+        User user = userRepository.findByLogin(email).orElse(null);
+        user.setResetPasswordToken(token);
+        userRepository.save(user);
+    }
+
+    public User getByResetPasswordToken(String token)  {
+        return userRepository.findByResetPasswordToken(token).orElse(null);
+    }
+
+    public void updatePassword(User user, String newPassword) {
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String encodedPassword = passwordEncoder.encode(newPassword);
+        user.setPassword(encodedPassword);
+
+        user.setResetPasswordToken(null);
+        userRepository.save(user);
     }
 
 

@@ -17,6 +17,12 @@ public class UserController {
         return userService.getAll();
     }
 
+    @GetMapping("/user/{id}")
+    public List<User> getall_connected(@PathVariable long id) {
+        List<User> list =  userService.getAll();
+        return list.stream().filter(u->u.getId()!=id).toList();
+    }
+
     @DeleteMapping("/user/{userId}")
     public void delete(@PathVariable long userId) throws Exception {
         userService.delete(userId);
