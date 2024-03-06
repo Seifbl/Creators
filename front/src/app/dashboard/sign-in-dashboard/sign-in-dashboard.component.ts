@@ -45,8 +45,8 @@ export class SignInDashboardComponent {
         "login":this.login,
         "password":this.password
     }).then(res=>{
-      this.router.navigate(["sign-in-dashboard"]);
       this.active=="login";
+      this.router.navigate(["sign-in-dashboard"]);
 
     });
     }

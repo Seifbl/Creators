@@ -15,7 +15,10 @@ import { SignInDashboardComponent } from './dashboard/sign-in-dashboard/sign-in-
 import { FormsModule } from '@angular/forms';
 import { HomeDashComponent } from './dashboard/home-dash/home-dash.component';
 import { EditUserComponent } from './dashboard/edit-user/edit-user.component';
+import { AddUserComponent } from './dashboard/add-user/add-user.component';
 import { CommentComponent } from './dashboard/comment/comment.component';
+import { EditCommentComponent } from './dashboard/edit-comment/edit-comment.component';
+import { AddCommentComponent } from './dashboard/add-comment/add-comment.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { CommentComponent } from './dashboard/comment/comment.component';
     SignInDashboardComponent,
     HomeDashComponent,
     EditUserComponent,
-    CommentComponent
+    AddUserComponent,
+    CommentComponent,
+    EditCommentComponent,
+    AddCommentComponent
   ],
   imports: [
     BrowserModule,

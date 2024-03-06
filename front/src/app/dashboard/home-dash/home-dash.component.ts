@@ -20,7 +20,6 @@ export class HomeDashComponent implements OnInit {
   this.auth = window.localStorage.getItem("auth_token");
    this.axios.request("GET","/user",{}).then(res=>{
     this.users = res.data;
-    console.log(this.users);
 });
   this.auth==null?this.router.navigate(["sign-in-dashboard"]):null;
  }

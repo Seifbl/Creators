@@ -9,9 +9,10 @@ import { RegisterComponent } from './register/register.component';
 import { SignInDashboardComponent } from './dashboard/sign-in-dashboard/sign-in-dashboard.component';
 import { HomeDashComponent } from './dashboard/home-dash/home-dash.component';
 import { EditUserComponent } from './dashboard/edit-user/edit-user.component';
+import { AddUserComponent } from './dashboard/add-user/add-user.component';
 import { CommentComponent } from './dashboard/comment/comment.component';
-
-
+import {EditCommentComponent} from './dashboard/edit-comment/edit-comment.component'
+import { AddCommentComponent } from './dashboard/add-comment/add-comment.component';
 const routes: Routes = [
   { path: '', component: FrontComponent },
   { path: 'reclamation', component: ReclamationComponent },
@@ -20,7 +21,11 @@ const routes: Routes = [
   {path:'sign-in-dashboard',component:SignInDashboardComponent},
   {path:'dashboard',component:HomeDashComponent},
   {path:'dashboard/useredit/:id',component:EditUserComponent},
-  {path:'dashboard/comment',component:CommentComponent}
+  {path:'dashboard/adduser',component:AddUserComponent},
+  {path:'dashboard/comment',component:CommentComponent},
+  {path:'dashboard/commentedit/:idComment',component:EditCommentComponent},
+  {path:'dashboard/commentadd',component:AddCommentComponent}
+
 ];
 
 

@@ -71,13 +71,14 @@
         </div>
         <div class="app-content">
         <div class="app-sidebar">
-        <a  href="#" class="app-sidebar-link active">
+        <a href="#" class="app-sidebar-link active">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
         <polyline points="9 22 9 12 15 12 15 22" /></svg>
         </a>
         
-
+       
+       
         </div>
         <div class="projects-section">
         <div class="projects-section-header">
@@ -110,7 +111,11 @@
                 <input type="email" class="form-control" placeholder="Email" id="login" name="login" [(ngModel)]="login" required />
                 <i class="input-icon uil uil-at"></i>
             </div>
-            <button type="submit" class="btn btn-lg btn-warning m-1" >Edit</button>
+             <div class="form-group mt-2">
+                <input type="password" class="form-control" placeholder="password" id="password" name="password" [(ngModel)]="password" required />
+                <i class="input-icon uil uil-at"></i>
+            </div>
+            <button type="submit" class="btn btn-lg btn-primary m-1" >Add</button>
             </form>
         </div>
 

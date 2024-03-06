@@ -89,7 +89,8 @@
               <div class="alert alert-success" role="alert" *ngIf="success!=''">
                 {{this.success}}
               </div>
-              <button type="button" class="btn btn-primary " >Add</button>
+              <button type="button" class="btn btn-primary "  [routerLink]="['/dashboard/commentadd']">Add</button>
+            
             <table class="table">
                 <thead>
                   <tr>
@@ -101,7 +102,7 @@
                     <tr *ngFor="let u of comments">
                     <th scope="row">{{u.content}}</th>
                     
-                    <th ><button type="button" class="btn btn-warning " [routerLink]="['useredit',u.id]">Edit</button>
+                    <th ><button type="button" class="btn btn-warning " [routerLink]="['/dashboard/commentedit',u.idComment]">Edit</button>
                         <button type="button" class="btn btn-danger mx-1" (click)="delete(u.idComment)">Delete</button></th>
                         
                   </tr>
